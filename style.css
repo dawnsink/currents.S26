@@ -1,0 +1,44 @@
+body {
+      font-family: Helvetica, sans-serif;
+      margin: 20px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+      grid-gap: 15px;
+    }
+    .grid-item {
+      background-color: #ebebeb;
+      color: rgb(0, 0, 0);
+      padding: 40px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    h1{
+      font-size: 90px;
+    }
+
+    .title{
+      text-align: center;
+    }
+    .hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+
+    /* Media Query for screens 650px or smaller */
+    @media (max-width: 650px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* single column */
+      }
+
+      h1{
+      font-size: 40px;
+    }
+
+    }
