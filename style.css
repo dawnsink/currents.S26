@@ -13,6 +13,12 @@ body {
       padding: 40px;
       font-size: 1.2rem;
       text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .grid-item:hover {
+      background-color: #d4d4d4;
     }
 
     h1{
@@ -22,14 +28,12 @@ body {
     .title{
       text-align: center;
     }
-    .hide {
-  display: none;
-}
-    
-.myDIV:hover + .hide {
-  display: block;
-  color: red;
-}
+
+  .hide {
+   display: none;
+  }
+
+
 
     /* Media Query for screens 650px or smaller */
     @media (max-width: 650px) {

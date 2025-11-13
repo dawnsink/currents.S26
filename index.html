@@ -9,30 +9,52 @@
 <body>
   <div class="title">
     <h1>PROCESS & CREATION</h1>
-    <p>instructors: Dan Siegler & Dawn Sinkowski</p>
   </div>
+
     
   <div class="grid-container">
-    <div class="grid-item">Time</div>
-    <div class="grid-item">Form & Meaning</div>
-    <div class="grid-item">Decay, Repetition, Suspense</div>
-    <div class="grid-item">Labor & Play</div>
-    <div class="grid-item">Tribute & Theft</div>
-    <div class="grid-item">Patterns & Data</div>
-    <div class="grid-item">Midsemester</div>
-    <div class="grid-item">Week 8</div>
-    <div class="grid-item">Week 9</div>
-    <div class="grid-item">Week 10</div>
-    <div class="grid-item">Week 11</div>
-    <div class="grid-item">Week 12</div>
-    <div class="grid-item">Week 13</div>
-    <div class="grid-item">Week 14</div>
-    <div class="grid-item">Fin.</div>
+    <div class="grid-item" data-week="1">Time</div>
+    <div class="grid-item" data-week="2">Form & Meaning</div>
+    <div class="grid-item" data-week="3">Decay, Repetition, Suspense</div>
+    <div class="grid-item" data-week="4">Labor & Play</div>
+    <div class="grid-item" data-week="5">Homage & Theft</div>
+    <div class="grid-item" data-week="6">Patterns & Data</div>
+    <div class="grid-item" data-week="7">Midsemester</div>
+    <div class="grid-item" data-week="8">Week 8</div>
+    <div class="grid-item" data-week="9">Week 9</div>
+    <div class="grid-item" data-week="10">Week 10</div>
+    <div class="grid-item" data-week="11">Week 11</div>
+    <div class="grid-item" data-week="12">Week 12</div>
+    <div class="grid-item" data-week="13">Week 13</div>
+    <div class="grid-item" data-week="14">Week 14</div>
+    <div class="grid-item" data-week="15">Critique</div>
   </div>
     <footer>
+
 <div class="title">
+      <p style="font-style: italic;">instructors: Dan Siegler & Dawn Sinkowski</p>
   <h4>Parsons School of Design, Spring 2026</h4>
 </div>
     </footer>
+
+
+<script>
+  const weeks = Array.from({length: 16}, (_, i) => `Week ${i + 1}`);
+
+  document.querySelectorAll('.grid-item').forEach(item => {
+    const weekIndex = parseInt(item.dataset.week);
+    const originalText = item.textContent.trim();
+    
+    item.addEventListener('mouseover', () => {
+      item.textContent = weeks[weekIndex - 1];
+    });
+    
+    item.addEventListener('mouseout', () => {
+      item.textContent = originalText;
+    });
+  });
+</script>
+
+
 </body>
 </html>
