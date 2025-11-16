@@ -1,48 +1,201 @@
-body {
-      font-family: Helvetica, sans-serif;
-      margin: 20px;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
-      grid-gap: 15px;
-    }
-    .grid-item {
-      background-color: #ebebeb;
-      color: rgb(0, 0, 0);
-      padding: 40px;
-      font-size: 1.2rem;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+/* Footer grid: 3 columns, centered text */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
 
-    .grid-item:hover {
-      background-color: #d4d4d4;
-    }
-
-    h1{
-      font-size: 90px;
-    }
-
-    .title{
-      text-align: center;
-    }
-
-  .hide {
-   display: none;
+.footer-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  font-size: 1.1rem;
+}
+@media (max-width: 800px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
+}
+/* set correct box model */
+* {
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid;
+    border-color:lawngreen
+}
+
+.jacquard-24-regular {
+  font-family: "Jacquard 24", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* flexbox container */
+.holy-grail-flexbox {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* columns (mobile) */
+.holy-grail-flexbox > * {
+    width:100%;
+    padding:1rem;
+}
+
+/* background colors */
+.holy-grail-flexbox > .header {background:#fdfdfd}
+/* .holy-grail-flexbox > .main-content {background:#fff} */
+
+/* Set correct box model */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgb(255, 255, 255);
+  border: 10px solid lawngreen;
+}
+
+/* Links: no line default; blue wavy underline on hover/focus */
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:focus-visible {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 8px;
+  text-decoration-color: blue;
+  font-family: "Jacquard 24", serif;
+  font-size: 28px;
+  color: blue;
+}
 
 
+/* Flexbox container */
+.holy-grail-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    /* Media Query for screens 650px or smaller */
-    @media (max-width: 650px) {
-      .grid-container {
-        grid-template-columns: 1fr; /* single column */
-      }
+/* Columns (mobile) */
+.holy-grail-flexbox > * {
+  width: 100%;
+  padding: 1rem;
+}
 
-      h1{
-      font-size: 40px;
-    }
+/* Background colors */
+.holy-grail-flexbox > .header {
+  background: #ffffff;
+}
 
-    }
+
+/* Main grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  grid-gap: 15px;
+}
+
+.grid-item {
+  background-color: #ebebeb;
+  color: rgb(0, 0, 0);
+  padding: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  background-color: #d4d4d4;
+}
+
+/* Two-column block styles */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 40px 0;
+  align-items: stretch; /* let grid items stretch to equal height */
+}
+
+/* Align two-column columns to look like grid items */
+.two-column .col {
+  background-color: #ebebeb; /* same as .grid-item */
+  color: rgb(0, 0, 0);
+  padding: 40px; /* same padding as .grid-item */
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex; /* make the column fill the grid cell so both columns match height */
+  flex-direction: column;
+  height: 100%;
+}
+
+.two-column .col:hover {
+  background-color: #d4d4d4; /* same hover as .grid-item */
+}
+
+/* Make links inside columns readable and inherit styling; no decoration until hover */
+.two-column .col a {
+  color: inherit;
+  text-decoration: none; /* keep links undecorated by default */
+}
+
+/* Ensure links inside two-column show blue wavy underline on hover/focus
+   with higher specificity than the global `a:hover` rule */
+.two-column .col a:hover,
+.two-column .col a:focus,
+.two-column .col a:focus-visible {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: blue;
+  font-family: "Jacquard 24", serif;
+}
+
+.two-column .col h3 {
+  margin-top: 0;
+}
+
+/* Make the two-column block stack on small screens */
+@media (max-width: 800px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1 {
+  font-size: 90px;
+}
+
+.title {
+  text-align: center;
+}
+
+/* Media Query for screens 800px or smaller */
+@media (max-width: 800px) {
+  body {
+    font-family: Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* single column */
+  }
+  h1 {
+    font-size: 40px;
+  }
+}

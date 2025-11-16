@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROCESS & CREATION</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <div class="title">
-    <h1>PROCESS & CREATION</h1>
-  </div>
 
-    
-  <div class="grid-container">
-    <div class="grid-item" data-week="1">Time</div>
-    <div class="grid-item" data-week="2">Form & Meaning</div>
-    <div class="grid-item" data-week="3">Decay, Repetition, Suspense</div>
-    <div class="grid-item" data-week="4">Labor & Play</div>
-    <div class="grid-item" data-week="5">Homage & Theft</div>
-    <div class="grid-item" data-week="6">Patterns & Data</div>
-    <div class="grid-item" data-week="7">Midsemester</div>
-    <div class="grid-item" data-week="8">Week 8</div>
-    <div class="grid-item" data-week="9">Week 9</div>
-    <div class="grid-item" data-week="10">Week 10</div>
-    <div class="grid-item" data-week="11">Week 11</div>
-    <div class="grid-item" data-week="12">Week 12</div>
-    <div class="grid-item" data-week="13">Week 13</div>
-    <div class="grid-item" data-week="14">Workshop</div>
-    <div class="grid-item" data-week="15">Critique</div>
-  </div>
-    <footer>
+  <div class="holy-grail-flexbox">
 
-<div class="title">
-      <p style="font-style: italic;">instructors: Dan Siegler & Dawn Sinkowski</p>
-  <h4>Parsons School of Design, Spring 2026</h4>
-</div>
+    <header class="header">
+      <div class="title">
+        <h1>PROCESS & CREATION</h1>
+      </div>
+    </header>
+
+
+    <main class="main-content">
+      <div class="grid-container">
+          <div class="grid-item" data-week="1">Time</div>
+          <div class="grid-item" data-week="2">Form & Meaning</div>
+          <div class="grid-item" data-week="3">Decay, Repetition, Suspense</div>
+          <div class="grid-item" data-week="4">Labor & Play</div>
+          <div class="grid-item" data-week="5">Homage & Theft</div>
+          <div class="grid-item" data-week="6">Patterns & Data</div>
+          <div class="grid-item" data-week="7">Midsemester</div>
+          <div class="grid-item" data-week="8">Eight TBD</div>
+          <div class="grid-item" data-week="9">Nine TBD</div>
+          <div class="grid-item" data-week="10">Ten TBD</div>
+          <div class="grid-item" data-week="11">Eleven TBD</div>
+          <div class="grid-item" data-week="12">Twelve TBD</div>
+          <div class="grid-item" data-week="13">Thirteen TBD</div>
+          <div class="grid-item" data-week="14">Workshop</div>
+          <div class="grid-item" data-week="15">Critique</div>
+        </div>
+        <div class="two-column" aria-label="Additional info">
+      <div class="col left">
+        <h4><a href="https://www.w3schools.com/html/html_links.asp"target="_blank">Course Info</a></h4>
+      </div>
+      <div class="col right">
+        <h4><a href="https://www.w3schools.com/html/html_links.asp"target="_blank">People</a></h4>
+      </div>
+    </div>
+    </main>
+
+
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-col" style="font-style: italic;">Parsons School of Design</div>
+        <div class="footer-col">.</div>
+        <div class="footer-col" style="font-style: italic;">BFACD, Spring 2026</div>
+      </div>
     </footer>
-
+</div>
 
 <script>
   const weeks = Array.from({length: 16}, (_, i) => `Week ${i + 1}`);
