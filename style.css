@@ -28,7 +28,7 @@ body {
     font-family: Helvetica, sans-serif;
     margin-left: 100px;
     margin-right: 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: #f3f3f3;
     border: 10px solid;
     border-color:lawngreen
 }
@@ -52,7 +52,7 @@ body {
 }
 
 /* background colors */
-.holy-grail-flexbox > .header {background:#fdfdfd}
+.holy-grail-flexbox > .header {background:#f3f3f3}
 /* .holy-grail-flexbox > .main-content {background:#fff} */
 
 /* Set correct box model */
@@ -64,7 +64,7 @@ body {
   font-family: Helvetica, sans-serif;
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(255, 255, 255);
+  background-color: #f3f3f3;
   border: 10px solid lawngreen;
 }
 
@@ -99,7 +99,7 @@ a:focus-visible {
 
 /* Background colors */
 .holy-grail-flexbox > .header {
-  background: #ffffff;
+  background: #f3f3f3;
 }
 
 
