@@ -1,3 +1,5 @@
+//credit to Carrie Sijia Wang https://carriesijiawang.com/3cc/ 
+
 function setup() {
   let container = document.getElementById('p5-container');
   let canvas = createCanvas(windowWidth, windowHeight);
