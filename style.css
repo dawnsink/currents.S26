@@ -1,61 +1,4 @@
-/* Footer grid: 3 columns, centered text */
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.footer-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60px;
-  font-size: 1.1rem;
-}
-@media (max-width: 800px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* set correct box model */
-* {
-    box-sizing:border-box;
-}
-
-body {
-    font-family: Helvetica, sans-serif;
-    margin-left: 100px;
-    margin-right: 100px;
-    background-color: #f3f3f3;
-    border: 10px solid;
-    border-color:lawngreen
-}
-
-.jacquard-24-regular {
-  font-family: "Jacquard 24", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* flexbox container */
-.holy-grail-flexbox {
-    display:flex;
-    flex-wrap:wrap;
-}
-
-/* columns (mobile) */
-.holy-grail-flexbox > * {
-    width:100%;
-    padding:1rem;
-}
-
-/* background colors */
-.holy-grail-flexbox > .header {background:#f3f3f3}
-/* .holy-grail-flexbox > .main-content {background:#fff} */
-
-/* Set correct box model */
+/* ===== Reset & Base Styles ===== */
 * {
   box-sizing: border-box;
 }
@@ -65,13 +8,37 @@ body {
   margin-left: 100px;
   margin-right: 100px;
   background-color: #f3f3f3;
-  border: 10px solid lawngreen;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-/* Links: no line default; blue wavy underline on hover/focus */
+/* ===== Typography ===== */
+.jacquard-24
+-regular {
+  font-family: "Jacquard 24", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 90px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h4 {
+  font-style: italic;
+  color: white;
+}
+
+/* ===== Links ===== */
 a {
   text-decoration: none;
 }
+
 a:hover,
 a:focus,
 a:focus-visible {
@@ -84,29 +51,39 @@ a:focus-visible {
   color: blue;
 }
 
+/* ===== p5.js Canvas ===== */
+#p5-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
 
-/* Flexbox container */
+/* ===== Main Layout ===== */
 .holy-grail-flexbox {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
-/* Columns (mobile) */
 .holy-grail-flexbox > * {
   width: 100%;
   padding: 1rem;
 }
 
-/* Background colors */
 .holy-grail-flexbox > .header {
-  background: #f3f3f3;
+  background: transparent;
+  color: white;
 }
 
-
-/* Main grid */
+/* ===== Grid Container ===== */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
 }
 
@@ -124,39 +101,35 @@ a:focus-visible {
   background-color: #d4d4d4;
 }
 
-/* Two-column block styles */
+/* ===== Two-Column Block ===== */
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin: 40px 0;
-  align-items: stretch; /* let grid items stretch to equal height */
+  align-items: stretch;
 }
 
-/* Align two-column columns to look like grid items */
 .two-column .col {
-  background-color: #ebebeb; /* same as .grid-item */
+  background-color: #ebebeb;
   color: rgb(0, 0, 0);
-  padding: 40px; /* same padding as .grid-item */
+  padding: 40px;
   font-size: 1.2rem;
   text-align: center;
-  display: flex; /* make the column fill the grid cell so both columns match height */
+  display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .two-column .col:hover {
-  background-color: #d4d4d4; /* same hover as .grid-item */
+  background-color: #d4d4d4;
 }
 
-/* Make links inside columns readable and inherit styling; no decoration until hover */
 .two-column .col a {
   color: inherit;
-  text-decoration: none; /* keep links undecorated by default */
+  text-decoration: none;
 }
 
-/* Ensure links inside two-column show blue wavy underline on hover/focus
-   with higher specificity than the global `a:hover` rule */
 .two-column .col a:hover,
 .two-column .col a:focus,
 .two-column .col a:focus-visible {
@@ -170,32 +143,43 @@ a:focus-visible {
   margin-top: 0;
 }
 
-/* Make the two-column block stack on small screens */
-@media (max-width: 800px) {
-  .two-column {
-    grid-template-columns: 1fr;
-  }
-}
-
-h1 {
-  font-size: 90px;
-}
-
-.title {
+/* ===== Footer Grid ===== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   text-align: center;
+  margin-top: 10px;
 }
 
-/* Media Query for screens 800px or smaller */
+.footer-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  font-size: 1.1rem;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 800px) {
   body {
-    font-family: Helvetica, sans-serif;
     margin-left: 20px;
     margin-right: 20px;
   }
-  .grid-container {
-    grid-template-columns: 1fr; /* single column */
-  }
+
   h1 {
     font-size: 40px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 }
